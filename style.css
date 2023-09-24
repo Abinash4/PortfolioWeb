@@ -1,0 +1,367 @@
+*,body{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+}
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+.container{
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.navigationHeaderWrap{
+    background-color: rgb(29, 32, 32);
+    margin-left:auto;
+
+    margin-top: auto;
+    position: absolute;
+    opacity: 1;
+    min-height: 30px;
+    height: auto;
+    width:15%;
+
+    z-index: 1;
+}
+
+.welcomeScreenWrapper{
+    /* background-color: aqua; */
+    background-image: url('../img/png_20230921_213412_0000.png');
+    background-size:80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-position-y:top; */
+    width: 100%;
+    height: 90vh;
+    top: 0px;
+    bottom: 0;
+    position: absolute;
+    
+    left: 0;
+}
+.welcomeScreenWrapper h1{
+    color: aliceblue;
+    margin: 15% 2%;
+    position: absolute;
+    /* position: relative; */
+    width: 46vw;
+    height: 20vh;
+    font-style: initial;
+    background: none;
+    font-family: monospace;
+    font-size: xxx-large;
+}
+#name{
+margin-top: 120px;
+font-weight: bold;
+max-width: 50vw;
+font-size: 70px;
+color: #333;
+/* border-right: none; */
+ white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing text */
+    border-right: 2px solid transparent; /* Create the typing cursor effect */
+    animation: typing 10s steps(100) infinite;
+    animation-delay: 2s;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+        border-right: 2px solid transparent;
+    }
+    100% {
+        width: 100%;
+        /* border-right: 2px solid #333; Color of the typing cursor */
+    }
+}
+.social{
+    background-color: rgb(16, 19, 19);
+    margin-top: 88vh;
+    position: absolute;
+    opacity: 1;
+    min-height: 50px;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+.menu{
+    background: linear-gradient(to left,  rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    /* background-image: linear-gradient(to right, rgb(29, 25, 25),rgb(36, 36, 35),rgb(39, 39, 37),rgb(26, 25, 31),rgb(18, 18, 31),rgb(15, 8, 20),rgb(3, 3, 3)); */
+    margin-top: 81vh;
+    /* left: 82%; */
+    position: absolute;
+    opacity: 1;
+    min-height: 30px;
+    height: 8%;
+    padding:10px 0;
+    max-width: 100%;
+    width: 100vw;
+    z-index: 2;
+    /* left: 0; */
+    margin-top: 0px;
+    opacity: 0.99999;
+}
+.menu h1{
+    width: 20%;
+    background-color: transparent;
+    color: azure;
+}
+
+
+/* circle placement */
+.circle {
+    width: 0px; /* Increase the circle's size as needed */
+    height: 0px;
+    margin-top: 305px;
+    margin-left: 80%;
+    border-radius: 50%;
+    position: fixed;
+    visibility: none;
+    background-color: aqua;
+    
+}
+
+.circular-div {
+    width: 40px;
+    height: 40px;
+    /* background-color: #f3f02d; */
+    z-index: 1;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0; /* Start with zero opacity */
+    border: 2px solid slategrey;
+    animation:  rotateDiv 4s linear infinite  ;
+    
+    
+}
+@keyframes rotateDiv {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(0);
+        border: 2px solid rgb(75, 156, 236);
+        /* animation:fadeIn 6s ease-in ; */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg) scale(1);
+        border: 2px solid rgb(30, 165, 26);
+        animation: fadeIn 3s ease-in ;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0.1;
+        visibility: hidden;
+    }
+    33% {
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    /* 75% {
+        opacity: 0.7;
+    } */
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.45;
+    }
+    75% {
+        opacity: 0.2;
+    }
+    /* 95%{
+        opacity: 1;
+        
+    } */
+    100%{
+        opacity: 0.1;
+        /* visibility: hidden; */
+        
+    }
+    
+}
+
+.circular-div:nth-child(1) {
+    background-image: url(../img/Angular.png);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) translate(80px) rotate(0deg);
+
+}
+
+.circular-div:nth-child(2) {
+    background-image: url(../img/csharp.svg);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-60%) translateY(-50%) rotate(36deg) translate(80px) rotate(-45deg);
+
+}
+
+.circular-div:nth-child(3) {
+    background-image: url(../img/html.png);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-70%) translateY(-50%) rotate(72deg) translate(80px) rotate(-90deg);
+
+}
+
+.circular-div:nth-child(4) {
+    background-image: url(../img/js.png);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-60%) translateY(-50%) rotate(108deg) translate(80px) rotate(-135deg);
+
+}
+
+.circular-div:nth-child(5) {
+    background-image: url(../img/sql.png);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-50%) translateY(-50%) rotate(144deg) translate(80px) rotate(-180deg);
+
+}
+
+.circular-div:nth-child(6) {
+    background-image: url(../img/Angular.png);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-50%) translateY(-50%) rotate(180deg) translate(80px) rotate(-225deg);
+
+}
+
+.circular-div:nth-child(7) {
+    background-image: url(../img/dotnetcore.png);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-50%) translateY(-50%) rotate(216deg) translate(80px) rotate(-270deg);
+
+}
+
+.circular-div:nth-child(8) {
+    background-image: url(../img/CSS3.svg);
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto; */
+    transform: translateX(-50%) translateY(-50%) rotate(252deg) translate(80px) rotate(-315deg);
+    
+}
+
+.circular-div:nth-child(9) {
+    background-image: url(../img/material.png);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-50%) translateY(-50%) rotate(288deg) translate(250px) rotate(-288deg);
+    
+}
+
+.circular-div:nth-child(10) {
+    background-image: url(../img/react.avif);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-50%) translateY(-50%) rotate(324deg) translate(250px) rotate(-324deg);
+
+}
+
+
+
+
+ /* animatediv */
+
+.main {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .circle {
+    width: 20px;
+    height: 20px;
+   
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 50%;
+} */
+
+/* .circle:nth-child(1) {
+   margin-bottom: 1rem;
+    background-color: #bb655c;
+    animation: rotateCircles 3s linear;
+    animation-fill-mode:forwards;
+} */
+
+/* .circle:nth-child(2) {
+    background-color: #21913d;
+    animation: rotateCircles 6s ;
+    animation-delay: -0.5s;
+    animation-fill-mode:forwards;
+}
+
+
+.circle:nth-child(4) {
+    transform: translateX(-50%) rotate(0deg) translateY(50px) rotate(90deg);
+}
+
+.circle:nth-child(5) {
+    transform: translateX(-50%) rotate(0deg) translateY(50px) rotate(135deg);
+}  */
+
+/* .circle1 {
+  
+    transform: translate(-50%, -50%) rotate(0deg) translateX(80px)translateY(50px)   rotate(0deg);
+    animation: rotateCircles 4s linear;
+}
+
+.circle2 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(80px) translateY(50px) rotate(45deg);
+    animation: rotateCircles 4s linear;
+    animation-delay: 2s;
+} */
+
+/* @keyframes rotateCircles {
+    0% {
+        transform: translate(-50%, -50%) rotate(-90deg) translateX(80px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(-95deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(90deg) translateX(80px) rotate(-95deg);
+    }
+}
+@keyframes topToBottom {
+    
+} */
