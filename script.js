@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         divs.forEach((div, index) => {
             const newAngle = currentAngle + index * degreesPerDiv;
-            const x = 468 * Math.cos((newAngle - 90) * (Math.PI / 180));
-            const y = 273 * Math.sin((newAngle - 90) * (Math.PI / 180));
+            const x = 470 * Math.cos((newAngle - 90) * (Math.PI / 180));
+            const y = 272 * Math.sin((newAngle - 90) * (Math.PI / 180));
             
             const isVisible = newAngle >= 180 && newAngle <= 360 ? true:false;
             
